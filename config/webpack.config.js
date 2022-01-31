@@ -6,8 +6,9 @@ module.exports = {
     main: path.join(__dirname, '..', '/src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, '..', 'dist'),
-    filename: '[name].[hash].bundle.js'
+    path: path.resolve(__dirname,'dist'),
+    filename: '[name].[hash].bundle.js',
+    publicPath: '/assets/',
   },
   module: {
     rules: [
