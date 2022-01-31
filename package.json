@@ -5,9 +5,9 @@
   "main": "src/application.js",
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.config.development.js",
-    "build": "rimraf dist &&  webpack --config ./config/webpack.config.production.js",
+    "build": "rimraf dist && webpack --config ./config/webpack.config.production.js",
     "test": "jest",
-    "deploy": "yarn run build && aws s3 cp dist/ s3://superfancy.com --recursive"
+    "deploy": "npm run build && aws s3 cp dist/ s3://superfancy.com --recursive"
   },
   "author": "Steve Kinney <hello@stevekinney.net> (http://stevekinney.net)",
   "license": "MIT",
